@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+
+  aboutId:any;
+  constructor(private route:ActivatedRoute){}
+
+  ngOnInit():void{
+
+    console.log("about id is ",this.route.snapshot.paramMap.get('id'));
+
+    this.aboutId=this.route.snapshot.paramMap.get('id')
+  }
+
 
 }

@@ -7,15 +7,15 @@ import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {
-    path:'user',
+    path:'user/:id',
     component:UserComponent
   },
   {
-    path:'about',
+    path:'about/:id',
     component:AboutComponent
   },
   {
-    path:'home',
+    path:'home/:id',
     component:HomeComponent
   }
 ];
