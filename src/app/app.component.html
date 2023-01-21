@@ -1,25 +1,9 @@
-<h1> basic routing </h1>
+<h1>{{title}}</h1>
 
-<a routerLink="home">Home</a>
-<br>
-<a routerLink="user">User</a>
-<br>
-<a routerLink="about">About</a>
-<br/>
+<ul>
+    <li *ngFor="let user of users">
+  {{user.name}} {{user.age}}
+    </li>
+</ul>
 
-<a routerLink="user">akash</a>
-
-
-
-<br/>
-<br/>
-<br/>
-<a routerLink="home/10">akash</a>
-<br>
-<a routerLink="user/40">kunal</a>
-<br>
-<a routerLink="about/50">govind</a>
-
-
-
-<router-outlet></router-outlet>
+<app-footer></app-footer>
