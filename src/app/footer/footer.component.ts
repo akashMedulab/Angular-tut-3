@@ -7,10 +7,17 @@ import { UserdataService } from '../service/userdata.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+
   users:any;
- constructor(private userdata:UserdataService){
-  console.log("userdata", userdata.users())
-  this.users = userdata.users()
+  constructor(private uersData:UserdataService)
+  {
+    uersData.user().subscribe((data)=>{
+      console.log('data',data)
+      this.users=data
+    })
+  }
+  ngOninit(){
+    
   }
 
 }
